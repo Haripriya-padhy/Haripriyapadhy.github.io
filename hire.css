@@ -1,0 +1,163 @@
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flexbox;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: var(--second-bg--color);
+    color: var(white);
+    
+  }
+
+
+  body
+  {
+    background: var(--bg-color);
+    display: flex;
+  }
+
+  :root{
+    --bg-color: #081b29;
+    --second-bg--color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+
+}
+  
+  h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+   
+  }
+
+  .btn-box
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+.btn-box .btn{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 45px;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box .btn:hover
+{
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2)
+{
+    background: transparent;
+    color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover
+{
+    color: var(--bg-color);
+}
+
+.btn-box .btn:nth-child(2)::before
+{
+    background: var(--main-color);
+}
+
+.btn-box .btn::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 45px;
+    background:var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before
+{
+    width: 100%;
+}
+  
+ #details{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+   justify-content: center;
+    
+  }
+  
+  textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #deadline
+  {
+    width: 150px;
+    margin-left: 400px;
+    
+   
+  }
+
+  #budget
+  {
+    justify-content: flex-start;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 600px) {
+    form {
+      padding: 10px;
+    }
+  }
+  
